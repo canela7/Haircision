@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		DA453E6520BF605400BD3BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA453E6420BF605400BD3BEB /* AppDelegate.swift */; };
-		DA453E6720BF605400BD3BEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA453E6620BF605400BD3BEB /* ViewController.swift */; };
 		DA453E6A20BF605400BD3BEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA453E6820BF605400BD3BEB /* Main.storyboard */; };
 		DA453E6C20BF605400BD3BEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA453E6B20BF605400BD3BEB /* Assets.xcassets */; };
 		DA453E6F20BF605400BD3BEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA453E6D20BF605400BD3BEB /* LaunchScreen.storyboard */; };
 		DA9E693120C0EB4300D6F6DD /* HaircutSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E693020C0EB4300D6F6DD /* HaircutSelectionViewController.swift */; };
+		DAC9397A20C1D6FB00E391E0 /* HaircisionIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9397920C1D6FB00E391E0 /* HaircisionIntroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DA453E6120BF605400BD3BEB /* Haircision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haircision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA453E6420BF605400BD3BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA453E6620BF605400BD3BEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DA453E6920BF605400BD3BEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA453E6B20BF605400BD3BEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA453E6E20BF605400BD3BEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA453E7020BF605400BD3BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA9E693020C0EB4300D6F6DD /* HaircutSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaircutSelectionViewController.swift; sourceTree = "<group>"; };
+		DAC9397920C1D6FB00E391E0 /* HaircisionIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaircisionIntroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				DA453E6420BF605400BD3BEB /* AppDelegate.swift */,
-				DA453E6620BF605400BD3BEB /* ViewController.swift */,
+				DAC9397920C1D6FB00E391E0 /* HaircisionIntroViewController.swift */,
 				DA9E693020C0EB4300D6F6DD /* HaircutSelectionViewController.swift */,
 			);
 			path = Controller;
@@ -155,9 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA453E6720BF605400BD3BEB /* ViewController.swift in Sources */,
 				DA9E693120C0EB4300D6F6DD /* HaircutSelectionViewController.swift in Sources */,
 				DA453E6520BF605400BD3BEB /* AppDelegate.swift in Sources */,
+				DAC9397A20C1D6FB00E391E0 /* HaircisionIntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
