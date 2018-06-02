@@ -98,6 +98,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ixD-gw-eYB"/>
+                    <connections>
+                        <outlet property="registerButton" destination="X3Y-MH-jWv" id="ibX-DU-f40"/>
+                        <outlet property="signInButton" destination="9Wj-sl-UDL" id="3RO-7u-4gt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,7 +110,7 @@
         <!--Login-->
         <scene sceneID="Dp5-fG-dV6">
             <objects>
-                <viewController id="Dwx-Rn-ciX" sceneMemberID="viewController">
+                <viewController id="Dwx-Rn-ciX" customClass="LogInViewController" customModule="Haircision" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cxz-RM-mai">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,7 +140,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="forgot password?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Joy-Yo-dsz">
-                                        <rect key="frame" x="0.0" y="129" width="359" height="20"/>
+                                        <rect key="frame" x="0.0" y="129" width="359" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -179,6 +183,12 @@
                         <viewLayoutGuide key="safeArea" id="9vS-dG-kYA"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="frP-k2-3iW"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="fx5-1S-fmi" id="E6G-2b-gBg"/>
+                        <outlet property="loginButton" destination="eK4-LV-T98" id="6jJ-ai-bvR"/>
+                        <outlet property="passwordTextField" destination="6vl-JU-RuV" id="7sA-gV-ud5"/>
+                        <outlet property="signUpButton" destination="78v-JM-mLU" id="zV8-D2-Euv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Vu-yM-GFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -224,7 +234,7 @@
         <!--Register-->
         <scene sceneID="nh4-2c-dgD">
             <objects>
-                <viewController id="oNS-E2-PUS" sceneMemberID="viewController">
+                <viewController id="oNS-E2-PUS" customClass="RegisterViewController" customModule="Haircision" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wio-ow-C10">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -236,7 +246,7 @@
                                 <rect key="frame" x="8" y="242.66666666666666" width="359" height="327.66666666666674"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aCR-iE-B0k" userLabel="Top Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="358.5" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="59.666666666666664"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPE-ZP-3GT">
                                                 <rect key="frame" x="141.33333333333334" y="0.0" width="76.666666666666657" height="24"/>

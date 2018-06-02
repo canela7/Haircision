@@ -10,10 +10,18 @@ import UIKit
 
 class HaircisionIntroViewController: UIViewController {
 
- 
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
+        
+        signInButton.layer.cornerRadius = 8.0
+        signInButton.layer.masksToBounds = true
+        
+        registerButton.layer.cornerRadius = 8.0
+        registerButton.layer.masksToBounds = true
     }
     
     override func viewWillAppear(_ animated: Bool) {

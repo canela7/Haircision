@@ -13,6 +13,8 @@
 		DA453E6F20BF605400BD3BEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA453E6D20BF605400BD3BEB /* LaunchScreen.storyboard */; };
 		DA9E693120C0EB4300D6F6DD /* HaircutSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E693020C0EB4300D6F6DD /* HaircutSelectionViewController.swift */; };
 		DAC9397A20C1D6FB00E391E0 /* HaircisionIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9397920C1D6FB00E391E0 /* HaircisionIntroViewController.swift */; };
+		DAC9397C20C2562F00E391E0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9397B20C2562F00E391E0 /* RegisterViewController.swift */; };
+		DAC9397E20C2565800E391E0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9397D20C2565800E391E0 /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		DA453E7020BF605400BD3BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA9E693020C0EB4300D6F6DD /* HaircutSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaircutSelectionViewController.swift; sourceTree = "<group>"; };
 		DAC9397920C1D6FB00E391E0 /* HaircisionIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaircisionIntroViewController.swift; sourceTree = "<group>"; };
+		DAC9397B20C2562F00E391E0 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		DAC9397D20C2565800E391E0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +73,9 @@
 			children = (
 				DA453E6420BF605400BD3BEB /* AppDelegate.swift */,
 				DAC9397920C1D6FB00E391E0 /* HaircisionIntroViewController.swift */,
+				DAC9397B20C2562F00E391E0 /* RegisterViewController.swift */,
 				DA9E693020C0EB4300D6F6DD /* HaircutSelectionViewController.swift */,
+				DAC9397D20C2565800E391E0 /* LogInViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -158,6 +164,8 @@
 				DA9E693120C0EB4300D6F6DD /* HaircutSelectionViewController.swift in Sources */,
 				DA453E6520BF605400BD3BEB /* AppDelegate.swift in Sources */,
 				DAC9397A20C1D6FB00E391E0 /* HaircisionIntroViewController.swift in Sources */,
+				DAC9397E20C2565800E391E0 /* LogInViewController.swift in Sources */,
+				DAC9397C20C2562F00E391E0 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
