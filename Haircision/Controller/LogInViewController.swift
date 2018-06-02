@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import SVProgressHUD
 
 class LogInViewController: UIViewController {
 
@@ -26,8 +28,6 @@ class LogInViewController: UIViewController {
         
         signUpButton.layer.cornerRadius = 8.0
         signUpButton.layer.masksToBounds = true
-        
-        
         
     }
 
@@ -63,6 +63,26 @@ class LogInViewController: UIViewController {
 
     }
     
+
+    @IBAction func logInPressed(_ sender: Any) {
+        
+        guard let email = emailTextField.text else {
+            print("Error with email input")
+            return
+        }
+        
+        guard let password = passwordTextField.text else {fatalError("no password found")}
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if error != nil {
+                print("Error login in: \(error!.localizedDescription)")
+            }else {
+                print("Login Successful!")
+                self.performSegue(withIdentifier: "goToHaircutSelections", sender: self)
+            }
+        }
+        
+    }
     
 
  

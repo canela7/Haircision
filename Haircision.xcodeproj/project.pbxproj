@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D6384567779DBAF649BCACD /* Pods_Haircision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCED32B641EA4D6FEF619FDB /* Pods_Haircision.framework */; };
+		DA42F30A20C316F0002AB373 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA42F30920C316F0002AB373 /* GoogleService-Info.plist */; };
 		DA453E6520BF605400BD3BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA453E6420BF605400BD3BEB /* AppDelegate.swift */; };
 		DA453E6A20BF605400BD3BEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA453E6820BF605400BD3BEB /* Main.storyboard */; };
 		DA453E6C20BF605400BD3BEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA453E6B20BF605400BD3BEB /* Assets.xcassets */; };
@@ -18,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33BAC9E0394C1A5B5E5A4149 /* Pods-Haircision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haircision.release.xcconfig"; path = "Pods/Target Support Files/Pods-Haircision/Pods-Haircision.release.xcconfig"; sourceTree = "<group>"; };
+		C96A2639DBD8399D2452BC72 /* Pods-Haircision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haircision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Haircision/Pods-Haircision.debug.xcconfig"; sourceTree = "<group>"; };
+		DA42F30920C316F0002AB373 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DA453E6120BF605400BD3BEB /* Haircision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haircision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA453E6420BF605400BD3BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA453E6920BF605400BD3BEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,6 +33,7 @@
 		DAC9397920C1D6FB00E391E0 /* HaircisionIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaircisionIntroViewController.swift; sourceTree = "<group>"; };
 		DAC9397B20C2562F00E391E0 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DAC9397D20C2565800E391E0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		FCED32B641EA4D6FEF619FDB /* Pods_Haircision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Haircision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D6384567779DBAF649BCACD /* Pods_Haircision.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		133AEB910ACFB266E64A87E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C96A2639DBD8399D2452BC72 /* Pods-Haircision.debug.xcconfig */,
+				33BAC9E0394C1A5B5E5A4149 /* Pods-Haircision.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1C6E3ADA162FDB94446D14C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCED32B641EA4D6FEF619FDB /* Pods_Haircision.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DA453E5820BF605400BD3BEB = {
 			isa = PBXGroup;
 			children = (
 				DA453E6320BF605400BD3BEB /* Haircision */,
 				DA453E6220BF605400BD3BEB /* Products */,
+				133AEB910ACFB266E64A87E9 /* Pods */,
+				1C6E3ADA162FDB94446D14C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +90,7 @@
 				DA453E7720BF629D00BD3BEB /* View */,
 				DA453E6B20BF605400BD3BEB /* Assets.xcassets */,
 				DA453E7020BF605400BD3BEB /* Info.plist */,
+				DA42F30920C316F0002AB373 /* GoogleService-Info.plist */,
 			);
 			path = Haircision;
 			sourceTree = "<group>";
@@ -96,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA453E7320BF605400BD3BEB /* Build configuration list for PBXNativeTarget "Haircision" */;
 			buildPhases = (
+				D7DCFAC1B64CD251E509ED0C /* [CP] Check Pods Manifest.lock */,
 				DA453E5D20BF605400BD3BEB /* Sources */,
 				DA453E5E20BF605400BD3BEB /* Frameworks */,
 				DA453E5F20BF605400BD3BEB /* Resources */,
+				91F0F358CCE53A5FE1D14867 /* [CP] Embed Pods Frameworks */,
+				B09BD811D8D75D839F6F8429 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,12 +179,77 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA453E6F20BF605400BD3BEB /* LaunchScreen.storyboard in Resources */,
+				DA42F30A20C316F0002AB373 /* GoogleService-Info.plist in Resources */,
 				DA453E6C20BF605400BD3BEB /* Assets.xcassets in Resources */,
 				DA453E6A20BF605400BD3BEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91F0F358CCE53A5FE1D14867 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Haircision/Pods-Haircision-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Haircision/Pods-Haircision-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B09BD811D8D75D839F6F8429 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Haircision/Pods-Haircision-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7DCFAC1B64CD251E509ED0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Haircision-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA453E5D20BF605400BD3BEB /* Sources */ = {
@@ -300,13 +395,14 @@
 		};
 		DA453E7420BF605400BD3BEB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C96A2639DBD8399D2452BC72 /* Pods-Haircision.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5PJHUVTXH;
 				INFOPLIST_FILE = Haircision/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Canela.Haircision;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CanelaApp.Haircision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,13 +411,14 @@
 		};
 		DA453E7520BF605400BD3BEB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33BAC9E0394C1A5B5E5A4149 /* Pods-Haircision.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5PJHUVTXH;
 				INFOPLIST_FILE = Haircision/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Canela.Haircision;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CanelaApp.Haircision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

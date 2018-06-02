@@ -155,6 +155,9 @@
                                                 <state key="normal" title="Login">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="logInPressed:" destination="Dwx-Rn-ciX" eventType="touchUpInside" id="C7t-Fy-lWG"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78v-JM-mLU">
                                                 <rect key="frame" x="3" y="53" width="353" height="42"/>
@@ -163,6 +166,9 @@
                                                 <state key="normal" title="Don't have an account? Sign Up.">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="oNS-E2-PUS" kind="show" identifier="goToSignUpScreen" id="1OA-Bl-Ivq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -188,13 +194,14 @@
                         <outlet property="loginButton" destination="eK4-LV-T98" id="6jJ-ai-bvR"/>
                         <outlet property="passwordTextField" destination="6vl-JU-RuV" id="7sA-gV-ud5"/>
                         <outlet property="signUpButton" destination="78v-JM-mLU" id="zV8-D2-Euv"/>
+                        <segue destination="6xI-T9-zxk" kind="show" identifier="goToHaircutSelections" id="Ngh-8b-45W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Vu-yM-GFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="-372"/>
+            <point key="canvasLocation" x="281" y="-477"/>
         </scene>
-        <!--Haircut Selection View Controller-->
+        <!--Haircut Selections-->
         <scene sceneID="eG7-SD-asX">
             <objects>
                 <tableViewController id="6xI-T9-zxk" customClass="HaircutSelectionViewController" customModule="Haircision" customModuleProvider="target" sceneMemberID="viewController">
@@ -226,6 +233,14 @@
                             <outlet property="delegate" destination="6xI-T9-zxk" id="zqY-Oc-7AI"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Haircut Selections" id="Qbl-1K-ZPI">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="1iS-86-v4r"/>
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="PlW-gm-qh5">
+                            <connections>
+                                <action selector="logOutPressed:" destination="6xI-T9-zxk" id="9AF-Kx-NTZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D0a-tc-3Ve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -278,7 +293,7 @@
                                         <rect key="frame" x="0.0" y="173.66666666666666" width="359" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ZsE-S0-aAL" userLabel="Buttons Stack View">
                                         <rect key="frame" x="0.0" y="221.66666666666663" width="359" height="106"/>
@@ -290,6 +305,9 @@
                                                 <state key="normal" title="Sign Up">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signUpPressed:" destination="oNS-E2-PUS" eventType="touchUpInside" id="RwP-Vo-C9m"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3x-jp-IaD">
                                                 <rect key="frame" x="31" y="68.000000000000057" width="297" height="38"/>
@@ -298,6 +316,9 @@
                                                 <state key="normal" title="Already have an account? Login">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="Dwx-Rn-ciX" kind="show" identifier="goToLoginScreen" id="n6v-du-WP1"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -318,6 +339,14 @@
                         <viewLayoutGuide key="safeArea" id="ell-hp-dmQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="JmW-YX-3tB"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="3dg-LH-MhY" id="doI-u5-uEF"/>
+                        <outlet property="fullNameTextField" destination="LtF-lp-7dE" id="cEb-Qq-g50"/>
+                        <outlet property="goToLoginButton" destination="Y3x-jp-IaD" id="QbU-Ly-aMT"/>
+                        <outlet property="passwordTextField" destination="9Jr-j2-Svc" id="7zA-TF-fvA"/>
+                        <outlet property="signUpButton" destination="pT2-vu-R60" id="gqX-5O-W8R"/>
+                        <segue destination="6xI-T9-zxk" kind="show" identifier="goToHaircutSelections" id="3EL-tT-m5v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="re5-iE-GSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -328,4 +357,9 @@
         <image name="background" width="2880" height="5120"/>
         <image name="loginbackground" width="2880" height="5120"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="nyw-ZX-fNc"/>
+        <segue reference="3EL-tT-m5v"/>
+        <segue reference="r6b-IR-zKQ"/>
+    </inferredMetricsTieBreakers>
 </document>
