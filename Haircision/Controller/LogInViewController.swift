@@ -73,11 +73,17 @@ class LogInViewController: UIViewController {
         
         guard let password = passwordTextField.text else {fatalError("no password found")}
         
+        //loading indicator effect
+        SVProgressHUD.show()
+        
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if error != nil {
                 print("Error login in: \(error!.localizedDescription)")
             }else {
                 print("Login Successful!")
+                
+                SVProgressHUD.dismiss()
+                
                 self.performSegue(withIdentifier: "goToHaircutSelections", sender: self)
             }
         }

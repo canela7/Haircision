@@ -17,6 +17,8 @@
 		DAC9397A20C1D6FB00E391E0 /* HaircisionIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9397920C1D6FB00E391E0 /* HaircisionIntroViewController.swift */; };
 		DAC9397C20C2562F00E391E0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9397B20C2562F00E391E0 /* RegisterViewController.swift */; };
 		DAC9397E20C2565800E391E0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9397D20C2565800E391E0 /* LogInViewController.swift */; };
+		DAF67BF120C4D3CF00EE38D6 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF67BF020C4D3CF00EE38D6 /* HomePageViewController.swift */; };
+		DAF67BF320C4D46700EE38D6 /* BarbershopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF67BF220C4D46700EE38D6 /* BarbershopModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		DAC9397920C1D6FB00E391E0 /* HaircisionIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaircisionIntroViewController.swift; sourceTree = "<group>"; };
 		DAC9397B20C2562F00E391E0 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DAC9397D20C2565800E391E0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		DAF67BF020C4D3CF00EE38D6 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		DAF67BF220C4D46700EE38D6 /* BarbershopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarbershopModel.swift; sourceTree = "<group>"; };
 		FCED32B641EA4D6FEF619FDB /* Pods_Haircision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Haircision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,6 +90,7 @@
 		DA453E6320BF605400BD3BEB /* Haircision */ = {
 			isa = PBXGroup;
 			children = (
+				DAF67BF420C4D46C00EE38D6 /* Model */,
 				DA453E7620BF628B00BD3BEB /* Controller */,
 				DA453E7720BF629D00BD3BEB /* View */,
 				DA453E6B20BF605400BD3BEB /* Assets.xcassets */,
@@ -100,9 +105,10 @@
 			children = (
 				DA453E6420BF605400BD3BEB /* AppDelegate.swift */,
 				DAC9397920C1D6FB00E391E0 /* HaircisionIntroViewController.swift */,
-				DAC9397B20C2562F00E391E0 /* RegisterViewController.swift */,
-				DA9E693020C0EB4300D6F6DD /* HaircutSelectionViewController.swift */,
 				DAC9397D20C2565800E391E0 /* LogInViewController.swift */,
+				DAC9397B20C2562F00E391E0 /* RegisterViewController.swift */,
+				DAF67BF020C4D3CF00EE38D6 /* HomePageViewController.swift */,
+				DA9E693020C0EB4300D6F6DD /* HaircutSelectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -114,6 +120,14 @@
 				DA453E6820BF605400BD3BEB /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DAF67BF420C4D46C00EE38D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAF67BF220C4D46700EE38D6 /* BarbershopModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA9E693120C0EB4300D6F6DD /* HaircutSelectionViewController.swift in Sources */,
+				DAF67BF320C4D46700EE38D6 /* BarbershopModel.swift in Sources */,
 				DA453E6520BF605400BD3BEB /* AppDelegate.swift in Sources */,
+				DAF67BF120C4D3CF00EE38D6 /* HomePageViewController.swift in Sources */,
 				DAC9397A20C1D6FB00E391E0 /* HaircisionIntroViewController.swift in Sources */,
 				DAC9397E20C2565800E391E0 /* LogInViewController.swift in Sources */,
 				DAC9397C20C2562F00E391E0 /* RegisterViewController.swift in Sources */,

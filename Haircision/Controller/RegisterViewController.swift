@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class RegisterViewController: UIViewController {
 
@@ -40,10 +41,15 @@ class RegisterViewController: UIViewController {
         guard let email = emailTextField.text else {fatalError("no email found")}
         guard let password = passwordTextField.text else {fatalError("no password found")}
         
+        //loading indicator show effect
+        SVProgressHUD.show()
+        
         
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if error == nil && user != nil {
                 print("User Created, Registraation completed")
+                
+                SVProgressHUD.dismiss()
                 
                 self.performSegue(withIdentifier: "goToHaircutSelections", sender: self)
                 
