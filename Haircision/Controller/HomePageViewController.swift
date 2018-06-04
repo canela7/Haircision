@@ -36,22 +36,23 @@ class HomePageViewController: UIViewController {
 }
 
 
-extension UIViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
-    }
+//extension UIViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+//
+////    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+////        <#code#>
+////    }
+////
+////    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+////        <#code#>
+////    }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//}
 
-    
-    
-    
-    
-    
-    
-    
-    
-}

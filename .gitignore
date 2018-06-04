@@ -67,5 +67,3 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 
 
-#GOOGLE FIREBASE .plist
-*.plist

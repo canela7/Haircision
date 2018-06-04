@@ -19,6 +19,8 @@
 		DAC9397E20C2565800E391E0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9397D20C2565800E391E0 /* LogInViewController.swift */; };
 		DAF67BF120C4D3CF00EE38D6 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF67BF020C4D3CF00EE38D6 /* HomePageViewController.swift */; };
 		DAF67BF320C4D46700EE38D6 /* BarbershopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF67BF220C4D46700EE38D6 /* BarbershopModel.swift */; };
+		DAF67BF620C4D81C00EE38D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAF67BF520C4D81C00EE38D6 /* GoogleService-Info.plist */; };
+		DAF67BF720C4D90D00EE38D6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA453E7020BF605400BD3BEB /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,7 @@
 		DAC9397D20C2565800E391E0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		DAF67BF020C4D3CF00EE38D6 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		DAF67BF220C4D46700EE38D6 /* BarbershopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarbershopModel.swift; sourceTree = "<group>"; };
+		DAF67BF520C4D81C00EE38D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCED32B641EA4D6FEF619FDB /* Pods_Haircision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Haircision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,6 +98,7 @@
 				DA453E7720BF629D00BD3BEB /* View */,
 				DA453E6B20BF605400BD3BEB /* Assets.xcassets */,
 				DA453E7020BF605400BD3BEB /* Info.plist */,
+				DAF67BF520C4D81C00EE38D6 /* GoogleService-Info.plist */,
 				DA42F30920C316F0002AB373 /* GoogleService-Info.plist */,
 			);
 			path = Haircision;
@@ -194,6 +198,8 @@
 			files = (
 				DA453E6F20BF605400BD3BEB /* LaunchScreen.storyboard in Resources */,
 				DA42F30A20C316F0002AB373 /* GoogleService-Info.plist in Resources */,
+				DAF67BF720C4D90D00EE38D6 /* Info.plist in Resources */,
+				DAF67BF620C4D81C00EE38D6 /* GoogleService-Info.plist in Resources */,
 				DA453E6C20BF605400BD3BEB /* Assets.xcassets in Resources */,
 				DA453E6A20BF605400BD3BEB /* Main.storyboard in Resources */,
 			);

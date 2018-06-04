@@ -48,7 +48,7 @@ class HaircutSelectionViewController: UITableViewController {
     @IBAction func logOutPressed(_ sender: Any) {
         do{
             try Auth.auth().signOut()
-            print("Log out succesfful")
+            print("Log out succ")
         }catch{
             print("Error: there was a problem loggin out")
         }
