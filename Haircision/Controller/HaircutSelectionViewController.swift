@@ -11,6 +11,8 @@ import Firebase
 
 class HaircutSelectionViewController: UITableViewController {
 
+        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

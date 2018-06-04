@@ -78,13 +78,28 @@ class LogInViewController: UIViewController {
         
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if error != nil {
+                
+                UIView.animate(withDuration: 5, animations: {
+                    SVProgressHUD.dismiss()
+                })
+                
                 print("Error login in: \(error!.localizedDescription)")
+                
+                let alert = UIAlertController(title: "Error Login In", message: "Check email and password", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Return", style: .default, handler: { (action) in
+                    print("Returned back to login")
+                }))
+                
+              self.present(alert, animated: true, completion: nil)
+                
+                
             }else {
                 print("Login Successful!")
                 
                 SVProgressHUD.dismiss()
                 
-                self.performSegue(withIdentifier: "goToHaircutSelections", sender: self)
+                self.performSegue(withIdentifier: "goToHomePage", sender: self)
             }
         }
         

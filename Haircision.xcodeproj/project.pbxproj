@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D6384567779DBAF649BCACD /* Pods_Haircision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCED32B641EA4D6FEF619FDB /* Pods_Haircision.framework */; };
+		DA408C7920C5C2E800C20754 /* BarbershopSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA408C7820C5C2E800C20754 /* BarbershopSelectedViewController.swift */; };
 		DA42F30A20C316F0002AB373 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA42F30920C316F0002AB373 /* GoogleService-Info.plist */; };
 		DA453E6520BF605400BD3BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA453E6420BF605400BD3BEB /* AppDelegate.swift */; };
 		DA453E6A20BF605400BD3BEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA453E6820BF605400BD3BEB /* Main.storyboard */; };
@@ -19,13 +20,12 @@
 		DAC9397E20C2565800E391E0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9397D20C2565800E391E0 /* LogInViewController.swift */; };
 		DAF67BF120C4D3CF00EE38D6 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF67BF020C4D3CF00EE38D6 /* HomePageViewController.swift */; };
 		DAF67BF320C4D46700EE38D6 /* BarbershopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF67BF220C4D46700EE38D6 /* BarbershopModel.swift */; };
-		DAF67BF620C4D81C00EE38D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAF67BF520C4D81C00EE38D6 /* GoogleService-Info.plist */; };
-		DAF67BF720C4D90D00EE38D6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA453E7020BF605400BD3BEB /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		33BAC9E0394C1A5B5E5A4149 /* Pods-Haircision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haircision.release.xcconfig"; path = "Pods/Target Support Files/Pods-Haircision/Pods-Haircision.release.xcconfig"; sourceTree = "<group>"; };
 		C96A2639DBD8399D2452BC72 /* Pods-Haircision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haircision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Haircision/Pods-Haircision.debug.xcconfig"; sourceTree = "<group>"; };
+		DA408C7820C5C2E800C20754 /* BarbershopSelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarbershopSelectedViewController.swift; sourceTree = "<group>"; };
 		DA42F30920C316F0002AB373 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DA453E6120BF605400BD3BEB /* Haircision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haircision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA453E6420BF605400BD3BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +112,7 @@
 				DAC9397D20C2565800E391E0 /* LogInViewController.swift */,
 				DAC9397B20C2562F00E391E0 /* RegisterViewController.swift */,
 				DAF67BF020C4D3CF00EE38D6 /* HomePageViewController.swift */,
+				DA408C7820C5C2E800C20754 /* BarbershopSelectedViewController.swift */,
 				DA9E693020C0EB4300D6F6DD /* HaircutSelectionViewController.swift */,
 			);
 			path = Controller;
@@ -198,8 +199,6 @@
 			files = (
 				DA453E6F20BF605400BD3BEB /* LaunchScreen.storyboard in Resources */,
 				DA42F30A20C316F0002AB373 /* GoogleService-Info.plist in Resources */,
-				DAF67BF720C4D90D00EE38D6 /* Info.plist in Resources */,
-				DAF67BF620C4D81C00EE38D6 /* GoogleService-Info.plist in Resources */,
 				DA453E6C20BF605400BD3BEB /* Assets.xcassets in Resources */,
 				DA453E6A20BF605400BD3BEB /* Main.storyboard in Resources */,
 			);
@@ -277,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA9E693120C0EB4300D6F6DD /* HaircutSelectionViewController.swift in Sources */,
+				DA408C7920C5C2E800C20754 /* BarbershopSelectedViewController.swift in Sources */,
 				DAF67BF320C4D46700EE38D6 /* BarbershopModel.swift in Sources */,
 				DA453E6520BF605400BD3BEB /* AppDelegate.swift in Sources */,
 				DAF67BF120C4D3CF00EE38D6 /* HomePageViewController.swift in Sources */,

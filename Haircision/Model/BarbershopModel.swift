@@ -8,6 +8,7 @@
 
 
 class BarbershopModel {
+    
     var id: String = ""
     var barbershopName = ""
     var address: String = ""

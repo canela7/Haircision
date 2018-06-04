@@ -51,7 +51,7 @@ class RegisterViewController: UIViewController {
                 
                 SVProgressHUD.dismiss()
                 
-                self.performSegue(withIdentifier: "goToHaircutSelections", sender: self)
+                self.performSegue(withIdentifier: "goToHomePage", sender: self)
                 
                 let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                 changeRequest?.displayName = fullName
