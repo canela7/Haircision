@@ -18,9 +18,7 @@ class BarbershopSelectedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         detailLabel.text = selection
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {

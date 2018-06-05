@@ -36,7 +36,7 @@ class HomePageViewController: UIViewController {
 //        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
 //        layout.itemSize = CGSize(width: width, height: width)
         
-        fullNameLabel.text = fullNameString
+        fullNameLabel.text =  Auth.auth().currentUser?.displayName
         
         retrieveBarbershopData();
         

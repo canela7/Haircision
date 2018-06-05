@@ -33,7 +33,7 @@ class RegisterViewController: UIViewController {
         goToLoginButton.layer.cornerRadius = 8.0
         goToLoginButton.layer.masksToBounds = true
         
-        retrieveuserData()
+//        retrieveuserData()
         
         
     }
@@ -43,7 +43,7 @@ class RegisterViewController: UIViewController {
         if segue.identifier == "goToHomePage" {
             if let destinationVC = segue.destination as? HomePageViewController
             {
-                destinationVC.fullNameString = Auth.auth().currentUser?.uid
+                destinationVC.fullNameString = Auth.auth().currentUser?.displayName
             }
         }
     }
@@ -65,8 +65,8 @@ class RegisterViewController: UIViewController {
             if error == nil && user != nil {
                 print("User Created, Registraation completed")
                 
-                self.createdUserDataBase()
-        
+//                self.createdUserDataBase()
+//
                 SVProgressHUD.dismiss()
                 
                 self.performSegue(withIdentifier: "goToHomePage", sender: self)
@@ -85,51 +85,51 @@ class RegisterViewController: UIViewController {
         }
     }
     
-    
-    func createdUserDataBase() {
-        
-        let userDB = Database.database().reference().child("userCreated")
-        
-        let userDictionary = ["fullName": fullNameTextField.text! , "email": emailTextField.text!]
-        
-        userDB.childByAutoId().setValue(userDictionary) {
-            (error, reference) in
-            if error != nil {
-                print(error!.localizedDescription)
-            }else {
-                print("user database sent to firebase!")
-            }
-        }
-    }
-    
-    
-    
-    func retrieveuserData() {
-      let userDB = Database.database().reference().child("userCreated")
-        
-        
-        userDB.observe(.childAdded) { (snapshot) in
-            
-            let snapshotValue = snapshot.value as! Dictionary<String,String>
-            
-            
-            let userFullName = snapshotValue["fullName"]!
-            let userEmail = snapshotValue["email"]!
-            
-            
-            let userData = UserModel()
-            userData.fullName = userFullName
-            userData.userEmail = userEmail
-
-            self.userDatas.append(userData)
-
-            
-            print(userFullName, userEmail)
-            
-            print(snapshotValue)
-            }
-        
-    }
+//
+//    func createdUserDataBase() {
+//
+//        let userDB = Database.database().reference().child("userCreated")
+//
+//        let userDictionary = ["fullName": fullNameTextField.text! , "email": emailTextField.text!]
+//
+//        userDB.childByAutoId().setValue(userDictionary) {
+//            (error, reference) in
+//            if error != nil {
+//                print(error!.localizedDescription)
+//            }else {
+//                print("user database sent to firebase!")
+//            }
+//        }
+//    }
+//
+//
+//
+//    func retrieveuserData() {
+//      let userDB = Database.database().reference().child("userCreated")
+//
+//
+//        userDB.observe(.childAdded) { (snapshot) in
+//
+//            let snapshotValue = snapshot.value as! Dictionary<String,String>
+//
+//
+//            let userFullName = snapshotValue["fullName"]!
+//            let userEmail = snapshotValue["email"]!
+//
+//
+//            let userData = UserModel()
+//            userData.fullName = userFullName
+//            userData.userEmail = userEmail
+//
+//            self.userDatas.append(userData)
+//
+//
+//            print(userFullName, userEmail)
+//
+//            print(snapshotValue)
+//            }
+//
+//    }
     
     
     
