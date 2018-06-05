@@ -231,13 +231,39 @@
                                     <outlet property="delegate" destination="g59-JQ-hGf" id="MtI-zj-T8f"/>
                                 </connections>
                             </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fqc-xW-oYR">
+                                <rect key="frame" x="8" y="72" width="359" height="80"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Barbershop Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTV-bU-n3Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Int-KD-gst">
+                                        <rect key="frame" x="0.0" y="50" width="359" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fqc-xW-oYR" firstAttribute="top" secondItem="ZxU-Lx-pZC" secondAttribute="top" constant="8" id="3h5-jE-Ycw"/>
+                            <constraint firstItem="ZxU-Lx-pZC" firstAttribute="trailing" secondItem="fqc-xW-oYR" secondAttribute="trailing" constant="8" id="IaA-wt-alO"/>
+                            <constraint firstItem="fqc-xW-oYR" firstAttribute="leading" secondItem="ZxU-Lx-pZC" secondAttribute="leading" constant="8" id="hxa-cf-jVQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZxU-Lx-pZC"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Home" id="8k9-Ib-xop">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="rfP-Rj-tTp"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="rfP-Rj-tTp">
+                            <connections>
+                                <action selector="addBarbershopPressed:" destination="g59-JQ-hGf" id="T3g-Ch-5t8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="5IF-Vy-ZW6">
                             <connections>
                                 <action selector="logoutPressed:" destination="g59-JQ-hGf" id="tTu-H1-ufG"/>
@@ -246,6 +272,8 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addressTextField" destination="Int-KD-gst" id="CH7-5e-Q6k"/>
+                        <outlet property="barbershopName" destination="WTV-bU-n3Q" id="noH-LF-rVT"/>
                         <outlet property="collectionView" destination="XE8-dV-KGj" id="3V9-FT-bu4"/>
                         <segue destination="6xI-T9-zxk" kind="show" identifier="goToHaircutSelections" id="Lbu-FY-la4"/>
                         <segue destination="m0K-LW-cMT" kind="show" identifier="selectedBarbershop" id="Cua-Mg-yCa"/>
