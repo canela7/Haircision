@@ -15,6 +15,8 @@
 		DA453E6C20BF605400BD3BEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA453E6B20BF605400BD3BEB /* Assets.xcassets */; };
 		DA453E6F20BF605400BD3BEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA453E6D20BF605400BD3BEB /* LaunchScreen.storyboard */; };
 		DA9E693120C0EB4300D6F6DD /* HaircutSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E693020C0EB4300D6F6DD /* HaircutSelectionViewController.swift */; };
+		DA9F2EED20C708C5000D587B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F2EEC20C708C5000D587B /* UserModel.swift */; };
+		DAAD618320C6137C00456857 /* CustomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAD618220C6137C00456857 /* CustomCollectionCell.swift */; };
 		DAC9397A20C1D6FB00E391E0 /* HaircisionIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9397920C1D6FB00E391E0 /* HaircisionIntroViewController.swift */; };
 		DAC9397C20C2562F00E391E0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9397B20C2562F00E391E0 /* RegisterViewController.swift */; };
 		DAC9397E20C2565800E391E0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9397D20C2565800E391E0 /* LogInViewController.swift */; };
@@ -34,6 +36,8 @@
 		DA453E6E20BF605400BD3BEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA453E7020BF605400BD3BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA9E693020C0EB4300D6F6DD /* HaircutSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaircutSelectionViewController.swift; sourceTree = "<group>"; };
+		DA9F2EEC20C708C5000D587B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		DAAD618220C6137C00456857 /* CustomCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionCell.swift; sourceTree = "<group>"; };
 		DAC9397920C1D6FB00E391E0 /* HaircisionIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaircisionIntroViewController.swift; sourceTree = "<group>"; };
 		DAC9397B20C2562F00E391E0 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DAC9397D20C2565800E391E0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				DAC9397D20C2565800E391E0 /* LogInViewController.swift */,
 				DAC9397B20C2562F00E391E0 /* RegisterViewController.swift */,
 				DAF67BF020C4D3CF00EE38D6 /* HomePageViewController.swift */,
+				DAAD618420C6138000456857 /* Custom Cell */,
 				DA408C7820C5C2E800C20754 /* BarbershopSelectedViewController.swift */,
 				DA9E693020C0EB4300D6F6DD /* HaircutSelectionViewController.swift */,
 			);
@@ -127,10 +132,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		DAAD618420C6138000456857 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DAAD618220C6137C00456857 /* CustomCollectionCell.swift */,
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
 		DAF67BF420C4D46C00EE38D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				DAF67BF220C4D46700EE38D6 /* BarbershopModel.swift */,
+				DA9F2EEC20C708C5000D587B /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,6 +297,8 @@
 				DAC9397A20C1D6FB00E391E0 /* HaircisionIntroViewController.swift in Sources */,
 				DAC9397E20C2565800E391E0 /* LogInViewController.swift in Sources */,
 				DAC9397C20C2562F00E391E0 /* RegisterViewController.swift in Sources */,
+				DA9F2EED20C708C5000D587B /* UserModel.swift in Sources */,
+				DAAD618320C6137C00456857 /* CustomCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,8 +9,8 @@
 
 class BarbershopModel {
     
-    
-    var barbershopName = ""
+    var sender: String = ""
+    var barbershopName: String = ""
     var address: String = ""
     var city: String = ""
     var state: String = ""

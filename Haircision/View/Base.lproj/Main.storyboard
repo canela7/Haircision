@@ -193,67 +193,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XE8-dV-KGj">
-                                <rect key="frame" x="0.0" y="261" width="375" height="339"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OHZ-uf-WkR">
-                                    <size key="itemSize" width="200" height="300"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="6MR-P0-dzP">
-                                        <rect key="frame" x="0.0" y="19.5" width="200" height="300"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTB-I2-9TJ">
-                                                    <rect key="frame" x="79" y="140" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </view>
-                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="VTB-I2-9TJ" firstAttribute="centerX" secondItem="6MR-P0-dzP" secondAttribute="centerX" id="Ft3-kM-5oR"/>
-                                            <constraint firstItem="VTB-I2-9TJ" firstAttribute="centerY" secondItem="6MR-P0-dzP" secondAttribute="centerY" id="YRg-c1-btR"/>
-                                        </constraints>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="g59-JQ-hGf" id="spm-k2-4Lv"/>
-                                    <outlet property="delegate" destination="g59-JQ-hGf" id="MtI-zj-T8f"/>
-                                </connections>
-                            </collectionView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fqc-xW-oYR">
-                                <rect key="frame" x="8" y="72" width="359" height="80"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="OtH-Qz-cKR">
+                                <rect key="frame" x="0.0" y="72" width="375" height="531"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Barbershop Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTV-bU-n3Q">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Int-KD-gst">
-                                        <rect key="frame" x="0.0" y="50" width="359" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RpB-88-95N" userLabel="fullName and Top Stack">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fqc-xW-oYR" userLabel="Top Stack">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Barbershop Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTV-bU-n3Q">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Int-KD-gst">
+                                                        <rect key="frame" x="0.0" y="50" width="375" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="120" translatesAutoresizingMaskIntoConstraints="NO" id="xBc-On-ash" userLabel="fullName">
+                                                <rect key="frame" x="0.0" y="100" width="375" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your user id:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52E-lo-bI8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ho3-Ic-4mZ">
+                                                        <rect key="frame" x="247.5" y="0.0" width="127.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Ho3-Ic-4mZ" secondAttribute="trailing" id="AUo-Qi-8EW"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Ho3-Ic-4mZ" secondAttribute="bottom" id="ECX-ao-QPq"/>
+                                                    <constraint firstItem="Ho3-Ic-4mZ" firstAttribute="top" secondItem="xBc-On-ash" secondAttribute="top" id="Nz3-cv-FT1"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XE8-dV-KGj">
+                                        <rect key="frame" x="0.0" y="265.5" width="375" height="265.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OHZ-uf-WkR">
+                                            <size key="itemSize" width="200" height="300"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="6MR-P0-dzP">
+                                                <rect key="frame" x="0.0" y="-17.5" width="200" height="300"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTB-I2-9TJ">
+                                                            <rect key="frame" x="79" y="140" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </view>
+                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="VTB-I2-9TJ" firstAttribute="centerX" secondItem="6MR-P0-dzP" secondAttribute="centerX" id="Ft3-kM-5oR"/>
+                                                    <constraint firstItem="VTB-I2-9TJ" firstAttribute="centerY" secondItem="6MR-P0-dzP" secondAttribute="centerY" id="YRg-c1-btR"/>
+                                                </constraints>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="g59-JQ-hGf" id="spm-k2-4Lv"/>
+                                            <outlet property="delegate" destination="g59-JQ-hGf" id="MtI-zj-T8f"/>
+                                        </connections>
+                                    </collectionView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fqc-xW-oYR" firstAttribute="top" secondItem="ZxU-Lx-pZC" secondAttribute="top" constant="8" id="3h5-jE-Ycw"/>
-                            <constraint firstItem="ZxU-Lx-pZC" firstAttribute="trailing" secondItem="fqc-xW-oYR" secondAttribute="trailing" constant="8" id="IaA-wt-alO"/>
-                            <constraint firstItem="fqc-xW-oYR" firstAttribute="leading" secondItem="ZxU-Lx-pZC" secondAttribute="leading" constant="8" id="hxa-cf-jVQ"/>
+                            <constraint firstItem="ZxU-Lx-pZC" firstAttribute="bottom" secondItem="OtH-Qz-cKR" secondAttribute="bottom" constant="20" id="5CF-HP-iD7"/>
+                            <constraint firstItem="OtH-Qz-cKR" firstAttribute="top" secondItem="ZxU-Lx-pZC" secondAttribute="top" constant="8" id="Eos-gF-gqo"/>
+                            <constraint firstItem="OtH-Qz-cKR" firstAttribute="leading" secondItem="ZxU-Lx-pZC" secondAttribute="leading" constant="8" id="FNC-eT-Spd"/>
+                            <constraint firstItem="OtH-Qz-cKR" firstAttribute="trailing" secondItem="ZxU-Lx-pZC" secondAttribute="trailing" constant="8" id="ywu-ec-FNy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZxU-Lx-pZC"/>
                     </view>
@@ -275,6 +307,7 @@
                         <outlet property="addressTextField" destination="Int-KD-gst" id="CH7-5e-Q6k"/>
                         <outlet property="barbershopName" destination="WTV-bU-n3Q" id="noH-LF-rVT"/>
                         <outlet property="collectionView" destination="XE8-dV-KGj" id="3V9-FT-bu4"/>
+                        <outlet property="fullNameLabel" destination="Ho3-Ic-4mZ" id="eZe-nX-5cP"/>
                         <segue destination="6xI-T9-zxk" kind="show" identifier="goToHaircutSelections" id="Lbu-FY-la4"/>
                         <segue destination="m0K-LW-cMT" kind="show" identifier="selectedBarbershop" id="Cua-Mg-yCa"/>
                     </connections>
@@ -336,7 +369,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Facials :) hppyEnding? " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQ4-QV-F4y">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tappers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQ4-QV-F4y">
                                             <rect key="frame" x="27" y="8" width="307" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -464,7 +497,7 @@
                         <outlet property="goToLoginButton" destination="Y3x-jp-IaD" id="QbU-Ly-aMT"/>
                         <outlet property="passwordTextField" destination="9Jr-j2-Svc" id="7zA-TF-fvA"/>
                         <outlet property="signUpButton" destination="pT2-vu-R60" id="gqX-5O-W8R"/>
-                        <segue destination="g59-JQ-hGf" kind="show" id="5OI-xq-a16"/>
+                        <segue destination="g59-JQ-hGf" kind="show" identifier="goToHomePage" id="5OI-xq-a16"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="re5-iE-GSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -496,7 +529,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1OA-Bl-Ivq"/>
-        <segue reference="fAU-bx-Mc3"/>
+        <segue reference="5OI-xq-a16"/>
         <segue reference="r6b-IR-zKQ"/>
     </inferredMetricsTieBreakers>
 </document>

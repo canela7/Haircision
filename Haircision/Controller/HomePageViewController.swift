@@ -17,7 +17,17 @@ class HomePageViewController: UIViewController {
     
     @IBOutlet weak var addressTextField: UITextField!
     
+    //var to pass in the full name!
+    var fullNameString: String!
+    var fullName: UserModel?
+    
+    @IBOutlet weak var fullNameLabel: UILabel!
+    
     var barbershopsData = ["1 Slauson", "PicoCutz", "MensHairDone","Clean Cuts"]
+    
+    
+    var barbershopData: [BarbershopModel] = [BarbershopModel] ()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +35,10 @@ class HomePageViewController: UIViewController {
 //        let width = (view.frame.size.width)
 //        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
 //        layout.itemSize = CGSize(width: width, height: width)
+        
+        fullNameLabel.text = fullNameString
+        
+        retrieveBarbershopData();
         
     }
 
@@ -37,12 +51,6 @@ class HomePageViewController: UIViewController {
         
         //to read and write data from database,
         let barbershopsDB = Database.database().reference().child("Barbershops")
-        
-//        var barbershopName = ""
-//        var address: String = ""
-//        var city: String = ""
-//        var state: String = ""
-//        var zipcode: String = ""
         
         
         let barberDictionary = ["Sender": Auth.auth().currentUser?.email, "BarbershopName": barbershopName.text! , "BarbershopAddress": addressTextField.text!]
@@ -61,13 +69,44 @@ class HomePageViewController: UIViewController {
     }
     
 
+    func retrieveBarbershopData() {
+        let barbershopDB = Database.database().reference().child("Barbershops")
+        
+        
+        barbershopDB.observe(.childAdded) { (snapshot) in
+            
+            let snapshotValue = snapshot.value as! Dictionary<String,String>
+            
+            let sender = snapshotValue["Sender"]!
+            let barbershopName = snapshotValue["BarbershopName"]!
+            let barbershopLocation = snapshotValue["BarbershopAddress"]!
+            
+            print(sender, barbershopName, barbershopLocation)
+            
+            print(snapshotValue)
+            
+            let barbershopData = BarbershopModel()
+            barbershopData.barbershopName = barbershopName
+            barbershopData.address =  barbershopLocation
+            
+            self.barbershopData.append(barbershopData)
+            
+            self.collectionView.reloadData()
+            
+            
+        }
+        
+        
+    }
+    
+    
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "selectedBarbershop" {
             if let destinationVC = segue.destination as? BarbershopSelectedViewController
             {
                 if let index = collectionView.indexPathsForSelectedItems?.first {
-                  destinationVC.selection = barbershopsData[index.row]
+                  destinationVC.selection = barbershopData[index.row].barbershopName
                 }
             }
         }
@@ -93,17 +132,18 @@ class HomePageViewController: UIViewController {
 extension HomePageViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return barbershopsData.count
+        return barbershopData.count
     }
 
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) 
         
         
         if let label = cell.viewWithTag(100) as? UILabel {
-            label.text = barbershopsData[indexPath.row]
+            label.text = barbershopData[indexPath.row].barbershopName
         }
+
         
         
         return cell;
