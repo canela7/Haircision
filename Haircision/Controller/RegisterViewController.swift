@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SVProgressHUD
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var goToLoginButton: UIButton!
@@ -32,11 +32,25 @@ class RegisterViewController: UIViewController {
         
         goToLoginButton.layer.cornerRadius = 8.0
         goToLoginButton.layer.masksToBounds = true
-        
-//        retrieveuserData()
-        
-        
+    
     }
+    
+    //MARK: Texfield methods
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == fullNameTextField {
+            emailTextField.becomeFirstResponder()
+        }else if textField == emailTextField {
+            passwordTextField.becomeFirstResponder()
+        }else if textField == passwordTextField  {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -85,58 +99,6 @@ class RegisterViewController: UIViewController {
         }
     }
     
-//
-//    func createdUserDataBase() {
-//
-//        let userDB = Database.database().reference().child("userCreated")
-//
-//        let userDictionary = ["fullName": fullNameTextField.text! , "email": emailTextField.text!]
-//
-//        userDB.childByAutoId().setValue(userDictionary) {
-//            (error, reference) in
-//            if error != nil {
-//                print(error!.localizedDescription)
-//            }else {
-//                print("user database sent to firebase!")
-//            }
-//        }
-//    }
-//
-//
-//
-//    func retrieveuserData() {
-//      let userDB = Database.database().reference().child("userCreated")
-//
-//
-//        userDB.observe(.childAdded) { (snapshot) in
-//
-//            let snapshotValue = snapshot.value as! Dictionary<String,String>
-//
-//
-//            let userFullName = snapshotValue["fullName"]!
-//            let userEmail = snapshotValue["email"]!
-//
-//
-//            let userData = UserModel()
-//            userData.fullName = userFullName
-//            userData.userEmail = userEmail
-//
-//            self.userDatas.append(userData)
-//
-//
-//            print(userFullName, userEmail)
-//
-//            print(snapshotValue)
-//            }
-//
-//    }
-    
-    
-    
-    
-    
-
-    
-    
-    
 }
+
+

@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SVProgressHUD
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -29,7 +29,11 @@ class LogInViewController: UIViewController {
         signUpButton.layer.cornerRadius = 8.0
         signUpButton.layer.masksToBounds = true
         
+   
+        
     }
+    
+    
 
     
     
@@ -61,6 +65,21 @@ class LogInViewController: UIViewController {
             self.loginButton.alpha = 1.0
         }, completion: nil)
 
+    }
+    
+    
+    //MARK: Texfield methods
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextField {
+            passwordTextField.becomeFirstResponder()
+        }else if textField == passwordTextField {
+            textField.resignFirstResponder()
+        }
+        return true
     }
     
 
@@ -104,10 +123,7 @@ class LogInViewController: UIViewController {
         }
         
     }
-    
-
- 
-    
-
-
 }
+
+
+

@@ -40,6 +40,9 @@ class HomePageViewController: UIViewController {
         
         retrieveBarbershopData();
         
+        
+      
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -154,13 +157,8 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
         performSegue(withIdentifier: "selectedBarbershop", sender: self)
     }
 
-
-
-
-
-
-
-
-
 }
+
+
+
 
